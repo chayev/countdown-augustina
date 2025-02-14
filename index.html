@@ -18,6 +18,7 @@
             background: url('Love-8.jpg') no-repeat center center/cover;
             position: relative;
             overflow: hidden;
+            flex-direction: column;
         }
 
         .overlay {
@@ -32,10 +33,11 @@
         .content {
             position: relative;
             z-index: 1;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 2.5em;
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -45,28 +47,46 @@
         #countdown {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            font-size: 2.5em;
+            gap: 15px;
+            font-size: 2em;
             font-weight: bold;
             animation: fadeIn 2s ease-in-out;
+            flex-wrap: wrap;
         }
 
         .time-box {
             background: rgba(255, 255, 255, 0.2);
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             text-align: center;
-            min-width: 100px;
+            min-width: 80px;
         }
 
         .label {
-            font-size: 0.6em;
+            font-size: 0.5em;
             text-transform: uppercase;
         }
 
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            #countdown {
+                font-size: 1.5em;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .time-box {
+                min-width: 70px;
+                padding: 10px;
+            }
         }
     </style>
 </head>
